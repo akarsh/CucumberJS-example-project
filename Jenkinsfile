@@ -16,7 +16,7 @@ pipeline {
         stage('Run test') {
             steps {
                 sh'''
-                docker run --rm --name cucumber-test example-project 
+                docker run --rm -v ${PWD}:/usr/src/app/ --name cucumber-test example-project 
                 '''
             }
         }

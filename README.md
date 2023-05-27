@@ -53,5 +53,5 @@ docker build -t example-project --target test .
 
 Docker command to start the container and run test
 ```sh
-docker run -it --rm --name cucumber-test example-project 
+docker run -it --rm -v ${PWD}:/usr/src/app/ --name cucumber-test example-project 
 ```
