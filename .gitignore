@@ -131,7 +131,3 @@ dist
 
 # macOS
 features/.DS_Store
-
-# cucumber report files
-cucumber-report.html
-cucumber-report.json
