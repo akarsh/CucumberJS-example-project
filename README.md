@@ -41,14 +41,6 @@ docker build command to build all stages
 docker build -t example-project . 
 ```
 
-### Docker multi-stage build for testing
-
-docker build command with --target test flag so that we specifically run the test build stage
-
-```sh
-docker build -t example-project --target test . 
-```
-
 ## Docker run test
 
 Docker command to start the container and run test
