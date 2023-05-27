@@ -4,6 +4,7 @@ The project is based on https://cucumber.io/docs/guides/10-minute-tutorial/?lang
 
 ## Project file structure
 
+```
 ├── features
 │   ├── step_definitions
 │   │   └── stepdefs.js
@@ -14,6 +15,7 @@ The project is based on https://cucumber.io/docs/guides/10-minute-tutorial/?lang
 ├── package-lock.json
 └── package.json
 └── README.md 
+```
 
 1. Scenarios are defined in .feature files, which are stored in the features directory 
 2. Step definitions are defined in .js filesm which are stored in the step_definitions directory
