@@ -1,14 +1,19 @@
 {
-  "name": "example-project",
+  "name": "CucumberJS-example-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "This project demonstrates the usage of cucumberjs with Docker and Jenkins CI ",
   "main": "index.js",
   "scripts": {
     "test": "cucumber-js"
   },
-  "keywords": [],
+  "keywords": [
+    "selenium-webdriver",
+    "cucumber-js",
+    "dockerfile",
+    "jenkinsfile"
+  ],
   "author": "Akarsh Seggemu",
-  "license": "gpl-3.0",
+  "license": "GPL-3.0-or-later",
   "devDependencies": {
     "@cucumber/cucumber": "^9.1.2"
   }
