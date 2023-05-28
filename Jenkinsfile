@@ -9,14 +9,20 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
-                docker build -t example-project . 
+                docker build -t example-project-install --target install .
+                '''
+                sh'''
+                docker run -it --rm -v ${PWD}:/usr/src/app/ --name example-project-install example-project-install
                 '''
             }
         }
         stage('Run test') {
             steps {
                 sh'''
-                docker run --rm -v ${PWD}:/usr/src/app/ --name cucumber-test example-project
+                docker build -t example-project-test --target test .
+                '''
+                sh'''
+                docker run -it --rm -v ${PWD}:/usr/src/app/ --name example-project-test example-project-test
                 '''
             }
         }
