@@ -12,7 +12,7 @@ pipeline {
                 docker build -t example-project-install --target install .
                 '''
                 sh'''
-                docker run -it --rm -v ${PWD}:/usr/src/app/ --name example-project-install example-project-install
+                docker run --rm -v ${PWD}:/usr/src/app/ --name example-project-install example-project-install
                 '''
             }
         }
@@ -22,7 +22,7 @@ pipeline {
                 docker build -t example-project-test --target test .
                 '''
                 sh'''
-                docker run -it --rm -v ${PWD}:/usr/src/app/ --name example-project-test example-project-test
+                docker run --rm -v ${PWD}:/usr/src/app/ --name example-project-test example-project-test
                 '''
             }
         }
