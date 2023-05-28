@@ -1,6 +1,10 @@
-FROM node:16.16.0
+FROM node:16.16.0 as base
 
 # Create app directory
 WORKDIR /usr/src/app
 
-ENTRYPOINT ["sh","/usr/src/app/init.sh"]
+FROM base as install
+CMD ["npm", "install"]
+
+FROM base as test
+CMD ["npm", "test"]

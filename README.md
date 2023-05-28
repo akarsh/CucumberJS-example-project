@@ -33,17 +33,28 @@ Run standalone
 npx cucumber-js
 ```
 
-## Docker build
-
-docker build command to build all stages
-
+## Docker multi-stage build for install
+docker build command with --target install flag so that we specifically run the install build stage
 ```sh
-docker build -t example-project . 
+docker build -t example-project-install --target install . 
+```
+
+## Docker run install
+
+Docker command to start the container and run install
+```sh
+docker run -it --rm -v ${PWD}:/usr/src/app/ --name example-project-install example-project-install 
+```
+
+## Docker multi-stage build for testing
+docker build command with --target test flag so that we specifically run the test build stage
+```sh
+docker build -t example-project-test --target test . 
 ```
 
 ## Docker run test
 
 Docker command to start the container and run test
 ```sh
-docker run -it --rm -v ${PWD}:/usr/src/app/ --name cucumber-test example-project 
+docker run -it --rm -v ${PWD}:/usr/src/app/ --name example-project-test example-project-test
 ```
