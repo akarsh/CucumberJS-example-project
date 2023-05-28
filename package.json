@@ -7,7 +7,7 @@
     "test": "cucumber-js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Akarsh Seggemu",
   "license": "gpl-3.0",
   "devDependencies": {
     "@cucumber/cucumber": "^9.1.2"
