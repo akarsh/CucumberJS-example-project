@@ -1,4 +1,4 @@
-# Selenium WebDriver CucumberJS example project
+# CucumberJS example project
 
 The project is based on [10-minute-tutorial](https://cucumber.io/docs/guides/10-minute-tutorial/?lang=javascript). It is created to demonstrate how to use Docker CI for development and Jenkins CI for remote development.
 
