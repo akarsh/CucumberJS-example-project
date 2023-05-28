@@ -43,7 +43,7 @@ docker build -t example-project-install --target install .
 
 Docker command to start the container and run install
 ```sh
-docker run -it --rm -v ${PWD}:/usr/src/app/ --name example-project-install example-project-install 
+docker run --rm -v ${PWD}:/usr/src/app/ --name example-project-install example-project-install 
 ```
 
 ## Docker multi-stage build for testing
@@ -56,5 +56,5 @@ docker build -t example-project-test --target test .
 
 Docker command to start the container and run test
 ```sh
-docker run -it --rm -v ${PWD}:/usr/src/app/ --name example-project-test example-project-test
+docker run --rm -v ${PWD}:/usr/src/app/ --name example-project-test example-project-test
 ```
